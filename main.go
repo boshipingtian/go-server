@@ -1,10 +1,13 @@
 package main
 
 import (
-	"go-server/config"
+	"fmt"
+	"go-server/core"
+	"go-server/global"
 )
 
 func main() {
 	// 初始化配置文件
-	config.InitConfig()
+	core.InitialConfig()
+	fmt.Println(global.Config)
 }
