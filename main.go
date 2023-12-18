@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"go-server/config"
+)
 
 func main() {
-	fmt.Print(123)
+	// 初始化配置文件
+	config.InitConfig()
 }
