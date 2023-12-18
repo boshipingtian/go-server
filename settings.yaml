@@ -1,8 +1,10 @@
 datasource:
   host: 192.168.192.215
   port: 3306
-  username: root
-  password: 15833097133duan!
+  db: go-server
+  username: go-server
+  password: 123456
+  config:
   log_level: dev
 logger:
   level: info
