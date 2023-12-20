@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"go-server/core"
 	"go-server/global"
 )
@@ -9,9 +8,12 @@ import (
 func main() {
 	// 初始化配置文件
 	core.InitialConfig()
-	fmt.Println(global.Config)
+	// 初始化logrus
+	global.Log = core.InitLogger()
+	global.Log.Warn("1234")
+	global.Log.Debug("1234")
+	global.Log.Error("1234")
+	global.Log.Info("1234")
 	// 连接数据库
 	core.Gorm()
-
-	fmt.Println(global.DB)
 }
